@@ -6,3 +6,8 @@
     font-weight: 400;
     src: url('./assets/fonts/raleway-v34-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
+
+  body {
+    background: rgb(220,255,166);
+background: linear-gradient(90deg, rgba(220,255,166,1) 0%, rgba(255,215,124,1) 46%, rgba(255,195,195,1) 100%);
+  }
