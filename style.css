@@ -1,13 +1,38 @@
-/* raleway-regular - latin */
+/* afacad-regular - latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 400;
-    src: url('./assets/fonts/raleway-v34-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Afacad';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/afacad-v1-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
   body {
-    background: rgb(243,255,198);
-background: linear-gradient(90deg, rgba(243,255,198,1) 0%, rgba(255,227,161,1) 50%, rgba(255,220,195,1) 100%);
+    padding: 2rem;
+    background-color: #f6f4f1;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    list-style-type: none;
+  }
+  .content {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .text {
+    align-items: center;
+  }
+
+  .image img {
+    border-radius: 50%;
   }
