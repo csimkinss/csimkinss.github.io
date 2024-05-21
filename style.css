@@ -8,31 +8,57 @@
 }
 
   body {
-    padding: 2rem;
-    background-color: #f6f4f1;
+    position: relative;
+    background-color: #FEFEFF;
+    margin: 0;
   }
 
   nav {
     display: flex;
     justify-content: space-between;
+    padding: 2rem;
+    border-bottom: 1px solid #273E47;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
   }
+
 
   ul {
     display: flex;
+    padding: 0;
   }
-
+  
   li {
     list-style-type: none;
+    margin-right: 1rem;
   }
+
+  li a {
+    text-decoration: none;
+    color: black;
+  }
+
+  a {
+    display: inherit;
+  }
+
+  a img {
+    max-width: 3rem;
+    cursor: pointer;
+  }
+
   .content {
     display: flex;
+    padding: 0 2rem;
+    transform: translateY(30%);
     gap: 1rem;
+
   }
 
   .text {
-    align-items: center;
+    transform: translateY(25%);
   }
 
   .image img {
     border-radius: 50%;
+    align-items: center;
   }
