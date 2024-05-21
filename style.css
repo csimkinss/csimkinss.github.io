@@ -87,6 +87,7 @@
     .content {
       flex-direction: column-reverse;
       align-items: center;
+      transform: translateY(15%);
     }
     .text {
       text-align: center;
