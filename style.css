@@ -48,17 +48,36 @@
 
   .content {
     display: flex;
+    justify-content: space-between;
+    max-width: 75rem;
+    margin: 0 auto;
     padding: 0 2rem;
     transform: translateY(30%);
-    gap: 1rem;
+    gap: 2rem;
 
   }
 
   .text {
-    transform: translateY(25%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  h2 {
+    margin-bottom: 0;
+  }
+
+  p {
+    max-width: 49rem;
+  }
+
+  .image {
+    display: inherit;
   }
 
   .image img {
+    max-width: 25rem;
     border-radius: 50%;
     align-items: center;
+    object-fit: cover;
   }
