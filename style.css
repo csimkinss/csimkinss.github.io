@@ -81,3 +81,17 @@
     align-items: center;
     object-fit: cover;
   }
+
+
+  @media(max-width: 650px) {
+    .content {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    .text {
+      text-align: center;
+    }
+    .image img {
+      max-width: 10rem;
+    }
+  }
