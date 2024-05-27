@@ -14,14 +14,16 @@
     position: relative;
     background-color: #FEFEFF;
     margin: 0;
+    position: relative;
+    overflow: hidden;
   }
 
   nav {
     display: flex;
     justify-content: space-between;
     padding: 2rem;
-    border-bottom: 1px solid #273E47;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    border-bottom: 1px solid rgba(122, 101, 99, 0.8);
+    box-shadow: 0 2px 4px 0 rgba(122, 101, 99, 0.2);
   }
 
 
@@ -85,6 +87,11 @@
     object-fit: cover;
   }
 
+  .accent-line {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+  }
 
   @media(max-width: 650px) {
     .content {
