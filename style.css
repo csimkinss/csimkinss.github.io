@@ -8,6 +8,8 @@
 }
 
   body {
+    height: 100vh;
+    height: 100dvh;
     font-family: 'Afacad';
     position: relative;
     background-color: #FEFEFF;
