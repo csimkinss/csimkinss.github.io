@@ -40,6 +40,11 @@
   li a {
     text-decoration: none;
     color: black;
+    transition: color 0.24s ease-in-out;
+    
+    &:hover {
+      color: #FF8690;
+    }
   }
 
   a {
@@ -47,8 +52,13 @@
   }
 
   a img {
+    width: 100%;
     max-width: 3rem;
     cursor: pointer;
+  }
+
+  .arrow-left {
+    max-height: 1.5rem;
   }
 
   .content {
@@ -92,6 +102,12 @@
     bottom: 0;
     z-index: -1;
   }
+
+  .current-page {
+    margin: 0;
+    color: #FF8690;
+  }
+
 
   @media(max-width: 650px) {
     .content {
