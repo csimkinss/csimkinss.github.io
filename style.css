@@ -1,83 +1,88 @@
 /* afacad-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Afacad';
+  font-family: "Afacad";
   font-style: normal;
   font-weight: 400;
-  src: url('./assets/fonts/afacad-v1-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./assets/fonts/afacad-v1-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-  body {
-    height: 100vh;
-    height: 100dvh;
-    font-family: 'Afacad';
-    position: relative;
-    background-color: #FEFEFF;
-    margin: 0;
-    position: relative;
-    overflow: hidden;
-  }
+body {
+  height: 100vh;
+  height: 100dvh;
+  font-family: "Afacad";
+  position: relative;
+  background-color: #fefeff;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
 
-  nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 2rem;
-    border-bottom: 1px solid rgba(122, 101, 99, 0.8);
-    box-shadow: 0 2px 4px 0 rgba(122, 101, 99, 0.2);
-  }
-
+nav {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  border-bottom: 1px solid rgba(122, 101, 99, 0.8);
+  box-shadow: 0 2px 4px 0 rgba(122, 101, 99, 0.2);
 
   ul {
     display: flex;
     padding: 0;
-  }
-  
-  li {
-    list-style-type: none;
-    margin-right: 1rem;
-  }
 
-  li a {
-    text-decoration: none;
-    color: black;
-    transition: color 0.24s ease-in-out;
-    
-    &:hover {
-      color: #FF8690;
+    li {
+      list-style-type: none;
+      margin-right: 1rem;
+
+      a {
+        text-decoration: none;
+        color: black;
+        transition: color 0.24s ease-in-out;
+
+        &:hover {
+          color: #ff8690;
+        }
+      }
     }
   }
+}
+a {
+  display: inherit;
 
-  a {
-    display: inherit;
-  }
-
-  a img {
+  img {
     width: 100%;
     max-width: 3rem;
     cursor: pointer;
   }
+}
 
-  .arrow-left {
-    display: inherit;
-    max-height: 1.35rem;
-  }
+.arrow-left {
+  display: inherit;
+  max-height: 1.35rem;
+}
 
-  .content {
-    display: flex;
-    justify-content: space-between;
-    max-width: 75rem;
-    margin: 0 auto;
-    padding: 0 2rem;
-    transform: translateY(30%);
-    gap: 2rem;
+/* home and projects pages share content styling */
+.content-container,
+.projects-container {
+  height: 100%;
+  display: grid;
+  place-content: center;
+}
 
-  }
+/* shared content styles continued */
+.content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  gap: 2rem;
+}
 
-  .text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   h2 {
     margin-bottom: 0;
@@ -86,40 +91,66 @@
   p {
     max-width: 49rem;
   }
+}
 
-  .image {
-    display: inherit;
-  }
+.image {
+  display: inherit;
+}
 
-  .image img {
-    max-width: 25rem;
-    border-radius: 50%;
+.image img {
+  max-width: 25rem;
+  border-radius: 50%;
+  align-items: center;
+  object-fit: cover;
+}
+
+.accent-line {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+
+/* menu item styling for page clicked */
+.current-page {
+  margin: 0;
+  color: #ff8690;
+}
+
+/* project page styling */
+.projects-container {
+  .project {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    object-fit: cover;
-  }
 
-  .accent-line {
-    position: absolute;
-    bottom: 0;
-    z-index: -1;
-  }
+    a {
+      max-width: 15rem;
 
-  .current-page {
-    margin: 0;
-    color: #FF8690;
-  }
-
-
-  @media(max-width: 650px) {
-    .content {
-      flex-direction: column-reverse;
-      align-items: center;
-      transform: translateY(15%);
+      .project-img {
+        width: 100%;
+        min-width: 15rem;
+        border-radius: 2rem;
+      }
     }
-    .text {
+
+    p {
       text-align: center;
-    }
-    .image img {
-      max-width: 10rem;
+      max-width: 22rem;
     }
   }
+}
+
+/* mobile styles */
+@media (max-width: 650px) {
+  .content {
+    flex-direction: column-reverse;
+    align-items: center;
+    transform: translateY(15%);
+  }
+  .text {
+    text-align: center;
+  }
+  .image img {
+    max-width: 10rem;
+  }
+}
