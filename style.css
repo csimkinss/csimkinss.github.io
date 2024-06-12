@@ -178,4 +178,9 @@ body {
   .image img {
     max-width: 10rem;
   }
+  .projects-container {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 2rem;
+  }
 }
