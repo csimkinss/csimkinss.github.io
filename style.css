@@ -7,9 +7,14 @@
   src: url("./assets/fonts/afacad-v1-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+html {
+  height: 100%;
+}
+
 body {
-  height: 100vh;
-  height: 100dvh;
+  height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr;
   font-family: "Afacad";
   position: relative;
   background-color: #fefeff;
@@ -18,41 +23,43 @@ body {
   overflow: hidden;
 }
 
-nav {
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem;
+.menu {
   border-bottom: 1px solid rgba(122, 101, 99, 0.8);
   box-shadow: 0 2px 4px 0 rgba(122, 101, 99, 0.2);
 
-  ul {
+  nav {
     display: flex;
-    padding: 0;
+    justify-content: space-between;
+    padding: 2rem;
 
-    li {
-      list-style-type: none;
-      margin-right: 1rem;
+    ul {
+      display: flex;
+      padding: 0;
 
-      a {
-        text-decoration: none;
-        color: black;
-        transition: color 0.24s ease-in-out;
+      li {
+        list-style-type: none;
+        margin-right: 1rem;
 
-        &:hover {
-          color: #ff8690;
+        a {
+          text-decoration: none;
+          color: black;
+          transition: color 0.24s ease-in-out;
+
+          &:hover {
+            color: #ff8690;
+          }
         }
       }
     }
   }
-}
-a {
-  display: inherit;
+  a {
+    display: inherit;
 
-  img {
-    width: 100%;
-    max-width: 3rem;
-    cursor: pointer;
+    img {
+      width: 100%;
+      max-width: 3rem;
+      cursor: pointer;
+    }
   }
 }
 
@@ -61,12 +68,13 @@ a {
   max-height: 1.35rem;
 }
 
-/* home and projects pages share content styling */
+/* home and projects pages shared content styling */
 .content-container,
 .projects-container {
   height: 100%;
   display: grid;
   place-content: center;
+  align-items: center;
 }
 
 /* shared content styles continued */
@@ -141,11 +149,28 @@ a {
 }
 
 /* mobile styles */
+@media (max-width: 1025px) {
+  body {
+    overflow: scroll;
+  }
+  .projects-container {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 12rem;
+
+    .project {
+      p {
+        max-width: 20rem;
+      }
+    }
+  }
+}
+
 @media (max-width: 650px) {
   .content {
     flex-direction: column-reverse;
     align-items: center;
-    transform: translateY(15%);
+    justify-content: center;
   }
   .text {
     text-align: center;
