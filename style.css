@@ -11,6 +11,11 @@ html {
   height: 100%;
 }
 
+.home {
+  height: 100vh;
+  height: 100dvh;
+}
+
 body {
   height: 100%;
   display: grid;
@@ -150,13 +155,19 @@ body {
 
 /* mobile styles */
 @media (max-width: 1025px) {
+  html {
+    height: auto;
+  }
   body {
+    height: auto;
     overflow: scroll;
   }
   .projects-container {
+    height: auto;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-bottom: 12rem;
+    padding-top: 5rem;
+    margin-bottom: 13rem;
 
     .project {
       p {
@@ -182,5 +193,6 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 2rem;
+    margin-bottom: 7rem;
   }
 }
