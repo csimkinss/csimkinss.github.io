@@ -11,7 +11,7 @@ html {
   height: 100%;
 }
 
-.home {
+.fixed-height-page {
   height: 100vh;
   height: 100dvh;
 }
