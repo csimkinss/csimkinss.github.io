@@ -131,7 +131,8 @@ body {
 
 /* project page styling */
 .projects-container {
-  .project {
+  .project,
+  .card {
     display: flex;
     flex-direction: column;
     align-items: center;
