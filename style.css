@@ -164,6 +164,12 @@ body {
   }
 }
 
+/* project page styling */
+.contact-content {
+  flex-direction: column;
+  justify-content: center;
+}
+
 /* mobile styles */
 @media (max-width: 1025px) {
   html {
