@@ -212,4 +212,7 @@ body {
     padding-top: 2rem;
     margin-bottom: 7rem;
   }
+  .contact-content {
+    justify-content: center;
+  }
 }
